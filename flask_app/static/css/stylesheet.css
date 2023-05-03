@@ -1,0 +1,27 @@
+div{
+    z-index: 2;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    z-index: -1;
+    position: fixed;
+}
+
+.sm-icon{
+    height:5em;
+}
+
+.md-icon{
+    height:18em;
+}
+
+.buttonlink{
+    border: 1px solid rgba(255, 0, 0, 0.582);
+    border-radius: 100%;
+    padding: 15px 30px;
+    height:fit-content;
+    width: fit-content;
+}
