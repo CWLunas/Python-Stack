@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+<title>Checkers_Im_Board</title>
+</head>
+<body>
+    <h1 style = "background-color: {{color1}}; color: {{color2}};">*** CHECKERBOARD ***</h1>
+        <table>
+            {% for i in range(0,num_row): %}
+                <tr>
+                    {% for x in range(0,num_col): %}
+                        {% if (x+i) % 2 == 0 %}
+                            <td style="background-color: {{color1}};"></td>
+                        {% else %}
+                            <td style="background-color: {{color2}};"></td>
+                        {%  endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
