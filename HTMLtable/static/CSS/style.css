@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+}
+
+td{
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+th{
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin:20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    line-height: 30px;
+    color: darkblue;
+}
+
+h3{
+    text-align: center;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    border-: 4px;
+}
