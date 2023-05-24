@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around flex-wrap">
+        <div class="col-4">
+            <h2 class="text-center">Title: {{book.title}}</h2>
+            <p class="text-center">Favorited by:</p>
+            {% for author in book.authors_favorited_books %}
+            <p class="text-center">{{author.name}}</p>
+            {% endfor %}
+        </div>
+        <form action="/join/author" method="post" class="col-6">
+            <h2 class="text-info">Update 'Favorited By' List For: {{book.title}} </h2>
+            <input type="hidden" name="book_id" value="{{book.id}}">
+            <div class="form-group">
+                <label for="author_id">Author:</label>
+                <select name="author_id" class="form-control" >
+                    {% for author in impartial_authors %}
+                        <option value="{{author.id}}">{{author.name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="submit" value="Add Author" class="btn btn-primary">
+        </form>
+    </div>
+    <a href="/" class="text-center mx-auto">Home</a>
+</body>
+</html>
