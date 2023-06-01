@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>{{one_post.title}}</p>
+    <form action="/update_post" method="POST">
+        <input type="hidden" name="id" value="{{one_post.id}}">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" value="{{one_post.title}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea class="form-control"  name="content" rows="3" >{{one_post.content}}</textarea>
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
